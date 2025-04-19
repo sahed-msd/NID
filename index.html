@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <title>Live Screen Share Controller</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background: #f0f0f5;
+            text-align: center;
+            padding: 50px;
+        }
+        h1 {
+            color: #333;
+            margin-bottom: 30px;
+        }
+        button {
+            padding: 15px 30px;
+            font-size: 18px;
+            margin: 10px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        #startButton {
+            background-color: #28a745;
+            color: white;
+        }
+        #startButton:hover {
+            background-color: #218838;
+        }
+        #stopButton {
+            background-color: #dc3545;
+            color: white;
+        }
+        #stopButton:hover {
+            background-color: #c82333;
+        }
+        video {
+            margin-top: 30px;
+            border: 3px solid #333;
+            border-radius: 10px;
+            max-width: 90%;
+            height: auto;
+        }
+        footer {
+            margin-top: 50px;
+            color: #777;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>📱 Live Screen Share কন্ট্রোলার</h1>
+    
+    <button id="startButton">🔴 Start Screen Share</button>
+    <button id="stopButton">🛑 Stop Screen Share</button>
+    
+    <div>
+        <video id="liveScreen" controls autoplay></video>
+    </div>
+
+    <footer>
+        &copy; 2025 | তোমার নিজস্ব Screen Share Controller
+    </footer>
+
+    <script>
+        const startButton = document.getElementById('startButton');
+        const stopButton = document.getElementById('stopButton');
+        const liveScreen = document.getElementById('liveScreen');
+
+        startButton.addEventListener('click', () => {
+            alert("স্ক্রিন শেয়ার অন করার সিগন্যাল পাঠানো হয়েছে!");
+            // এখানে WebSocket/WebRTC দিয়ে সিগন্যাল যাবে
+        });
+
+        stopButton.addEventListener('click', () => {
+            alert("স্ক্রিন শেয়ার বন্ধ করার সিগন্যাল পাঠানো হয়েছে!");
+            // এখানে WebSocket/WebRTC দিয়ে সিগন্যাল যাবে
+        });
+    </script>
+
+</body>
+</html>
